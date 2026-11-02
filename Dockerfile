@@ -19,8 +19,8 @@ COPY docker/php/php.ini /usr/local/etc/php/conf.d/zz-app.ini
 
 WORKDIR /var/www/html
 COPY --from=vendor --chown=www-data:www-data /app /var/www/html
-RUN mkdir -p storage/framework/{cache,sessions,views} storage/logs database \
-    && chown -R www-data:www-data storage bootstrap/cache database
+RUN mkdir -p storage/framework/cache storage/framework/sessions storage/framework/views storage/logs storage/app database/data /var/www/public-shared \
+    && chown -R www-data:www-data storage bootstrap/cache database /var/www/public-shared
 
 COPY docker/php/entrypoint.sh /usr/local/bin/entrypoint
 RUN chmod +x /usr/local/bin/entrypoint
