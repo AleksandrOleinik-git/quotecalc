@@ -8,14 +8,17 @@ The same pricing engine is exposed through a small REST API, so the calculator c
 
 > Demo project by **Aleksandr Oleinik**, a freelance PHP/Laravel developer.
 
+**Live demo: https://calc.clientus.vip** (the admin panel at `/admin` is private).
+
 ---
 
 ## Screenshots
 
-_Placeholders: add images to `docs/screenshots/` and link them here._
+| Public calculator with live, server-side price breakdown | Saved quote with frozen price snapshot and PDF download |
+|---|---|
+| ![Calculator](docs/screenshots/calculator.jpg) | ![Quote](docs/screenshots/quote.jpg) |
 
-| Public calculator | Quote page and PDF | Admin: quotes | Admin: product pricing |
-|---|---|---|---|
+---|---|---|---|
 | `docs/screenshots/calculator.png` | `docs/screenshots/quote.png` | `docs/screenshots/admin-quotes.png` | `docs/screenshots/admin-product.png` |
 
 ---
