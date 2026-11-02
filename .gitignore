@@ -28,3 +28,4 @@ Thumbs.db
 /database/*.sqlite-journal
 .admin-credentials.local
 .env.*.local
+.admin-credentials.*
