@@ -16,6 +16,8 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->alias(['api.key' => EnsureApiKey::class]);
+        // Behind a TLS-terminating reverse proxy (Traefik, Nginx, load balancer) signed URLs must see https.
+        $middleware->trustProxies(at: '*');
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         // A configuration the catalogue can't price is a user input problem: answer with 422 / back with errors.
