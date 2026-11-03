@@ -18,6 +18,8 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias(['api.key' => EnsureApiKey::class]);
         // Behind a TLS-terminating reverse proxy (Traefik, Nginx, load balancer) signed URLs must see https.
         $middleware->trustProxies(at: '*');
+        // Live pricing is read-only and throttled; skipping CSRF keeps it working when the session rotates (e.g. after an admin login in another tab).
+        $middleware->validateCsrfTokens(except: ['calculator/price']);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         // A configuration the catalogue can't price is a user input problem: answer with 422 / back with errors.

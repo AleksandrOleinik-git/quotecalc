@@ -33,6 +33,7 @@ class AdminPanelProvider extends PanelProvider
             ->colors(['primary' => Color::Indigo])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->pages([Pages\Dashboard::class])
+            ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([Widgets\AccountWidget::class])
             ->middleware([
                 EncryptCookies::class,

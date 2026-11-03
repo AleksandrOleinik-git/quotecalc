@@ -25,7 +25,7 @@
     </main>
 
     <footer class="mx-auto max-w-6xl px-4 pb-10 text-xs text-slate-400">
-        Demo project by Aleksandr Oleinik · prices are calculated on the server.
+        Demo project by Aleksandr Oleinik · built with Laravel · prices are calculated on the server.
     </footer>
 </body>
 </html>
