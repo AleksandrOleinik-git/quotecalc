@@ -50,7 +50,7 @@ class QuotesPerDayChart extends ChartWidget
         }
 
         return [
-            'datasets' => [['label' => 'Quotes', 'data' => $data]],
+            'datasets' => [['label' => 'Quotes', 'data' => $data, 'backgroundColor' => 'rgba(99, 102, 241, 0.6)', 'borderColor' => 'rgb(99, 102, 241)']],
             'labels' => $labels,
         ];
     }
