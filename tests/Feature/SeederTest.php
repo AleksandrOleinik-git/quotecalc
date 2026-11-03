@@ -8,6 +8,7 @@ use App\Models\Product;
 use App\Models\Quote;
 use App\Models\User;
 use Database\Seeders\AdminUserSeeder;
+use Database\Seeders\DemoQuoteSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -20,7 +21,7 @@ final class SeederTest extends TestCase
         $this->seed();
 
         $this->assertSame(
-            [4, true, 3],
+            [4, true, 3 + DemoQuoteSeeder::GENERATED_QUOTES],
             [Product::count(), User::where('email', AdminUserSeeder::EMAIL)->sole()->is_admin, Quote::count()],
         );
     }

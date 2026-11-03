@@ -24,6 +24,14 @@ class QuotesPerDayChart extends ChartWidget
         return 'bar';
     }
 
+    protected function getOptions(): array
+    {
+        return [
+            'plugins' => ['legend' => ['display' => false]],
+            'scales' => ['y' => ['ticks' => ['precision' => 0]]],
+        ];
+    }
+
     protected function getData(): array
     {
         $days = 30;
