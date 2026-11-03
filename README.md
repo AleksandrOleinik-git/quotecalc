@@ -18,8 +18,9 @@ The same pricing engine is exposed through a small REST API, so the calculator c
 |---|---|
 | ![Calculator](docs/screenshots/calculator.jpg) | ![Quote](docs/screenshots/quote.jpg) |
 
----|---|---|---|
-| `docs/screenshots/calculator.png` | `docs/screenshots/quote.png` | `docs/screenshots/admin-quotes.png` | `docs/screenshots/admin-product.png` |
+| Admin dashboard: quote stats and quotes per day (Filament) | Admin quote view with line-by-line breakdown and status actions |
+|---|---|
+| ![Dashboard](docs/screenshots/dashboard.jpg) | ![Admin quote](docs/screenshots/admin-quote.jpg) |
 
 ---
 
